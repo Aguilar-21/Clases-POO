@@ -1,14 +1,14 @@
 class Usuario {
-    private password: string
+    private password: string;
 
     constructor(pass: string){
         this.password = pass;
     }
 
     validar(pass: string): boolean {
-        return this.password == pass;
+        return this.password === pass;
     }
 }
 
 const u = new Usuario("1234");
-console.log(u.password);
+console.log(u.validar("12"));
