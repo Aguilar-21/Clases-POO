@@ -19,13 +19,17 @@ class Programa {
         });
     }
     evaluarNota(note) {
+        if (note < 0 || note > 10) {
+            console.log("Nota inválida");
+            return;
+        }
         if (note >= 9) {
             console.log("Excelente");
         }
-        else if (note >= 7 && note <= 8.9) {
+        else if (note >= 7) {
             console.log("Bueno");
         }
-        else if (note >= 6 && note <= 6.9) {
+        else if (note >= 6) {
             console.log("Regular");
         }
         else {
